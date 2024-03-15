@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình gán nhãn câu hỏi và ảnh</title>
+    <link rel = "stylesheet" href = "styles.css">
+    <script src="function.js"></script>
+</head>
+<body>
+
+    <h1>Chương trình gán nhãn dữ liệu UIT</h1>
+
+    <h3 style="text-align: center">Đang thực hiện trên file <span id="currentFile"></span></h3>
+
+    <div id = 'question-form'>
+        <h2 style = "text-align: center">Question Form</h2>
+
+        <div id = "question-content">
+            <div id = "text-format">
+
+                <div id = "question"> 
+                    <label for = "question"> Câu hỏi </label>
+                    <input type = "text" value = "" />
+                </div>
+        
+                <div id = "choices">
+                    <label for = "choices"> Các lựa chọn </label>
+                    <input ></textarea>
+                </div>
+        
+                <div id = "answer"> 
+                    <label for = "answer"> Đáp án đúng </label>
+                    <input type = "text" value = "" />
+                </div>
+        
+                <div id = "explain">
+                    <label for = "explain"> Giải thích </label>
+                    <input type = "text" value = "" />
+                </div>
+        
+                <div id = "subject">
+                    <label for = "subject"> Môn học </label>
+                    <input type = "text" value = "" />
+                </div>
+        
+                <div id = "grade">
+                    <label for = "grade"> Lớp </label>
+                    <input type = "text" value = "" />
+                </div>
+    
+            </div>
+    
+            <div id = "image-format">
+                <form id="image-form" enctype="multipart/form-data">
+                    <input type="file" id="image-input" accept=".jpg, .jpeg, .png" onchange="previewImage()">
+                </form>
+                <img id="preview-image" alt="Preview Image">
+            </div>
+        </div>
+    </div>
+    <button onclick="submitData()">SUBMIT</button>
+    <button onclick="nextQuestion()">Next question</button>
+    <button onclick="nextFile()">Next file</button>
+
+    <p id="noFilesMessage"></p>
+
+    
+</body>
+</html>
